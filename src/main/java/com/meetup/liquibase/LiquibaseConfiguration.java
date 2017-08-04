@@ -65,6 +65,8 @@ public class LiquibaseConfiguration  implements EnvironmentAware {
     return new HikariDataSource(config);
   }
 
+
+
   @Bean
   public SpringLiquibase liquibase() {
     SpringLiquibase liquibase = new SpringLiquibase();
