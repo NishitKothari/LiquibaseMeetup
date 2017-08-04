@@ -1,0 +1,15 @@
+liquibase:
+    context: master
+    change-log: classpath:/config/liquibase/liquibase.xml
+    parameters: {"DBMS":"oracle","varcharType":"char","currentTimeStamp":"sysdate","databaseOwnerUser":"app_ddl","databaseApplicationUser":"app_dml", "autoIncrement":"false","key":"key"}
+    datasource:
+        username: app_ddl
+        password: app_ddl
+
+spring:
+    datasource:
+        dataSourceClassName: oracle.jdbc.xa.client.OracleXADataSource
+        url: jdbc:oracle:thin:@localhost:1521:xe
+        username: app_ddl
+        password: app_ddl
+        maximumPoolSize: 10
