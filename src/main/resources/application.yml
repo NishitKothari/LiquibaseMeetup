@@ -10,6 +10,6 @@ spring:
     datasource:
         dataSourceClassName: oracle.jdbc.xa.client.OracleXADataSource
         url: jdbc:oracle:thin:@localhost:1521:xe
-        username: app_ddl
-        password: app_ddl
+        username: app_dml
+        password: app_dml
         maximumPoolSize: 10
